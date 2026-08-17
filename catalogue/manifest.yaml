@@ -47,7 +47,7 @@ metadata:
     project: roboshop
     tier: backend
 
- spec:
+spec:
   selector:
      name: catalogue
      env: dev
