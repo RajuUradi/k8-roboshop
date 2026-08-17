@@ -19,18 +19,18 @@ spec:
    tier: db
    project: roboshop
 
-template:
- metadata:
-  labels:  # template labels: Labels that will be placed on newly created Pods
-   name: mongodb
-   env: dev
-   tier: db
-   project: roboshop
+ template:
+  metadata:
+   labels:  # template labels: Labels that will be placed on newly created Pods
+    name: mongodb
+    env: dev
+    tier: db
+    project: roboshop
 
- spec:
-  containers:
-   - name: mongodb
-     image: rajuuradi/mongodb:1.0.0
+  spec:
+   containers:
+    - name: mongodb
+      image: rajuuradi/mongodb:1.0.0
 
 ---
  apiVersion: v1
@@ -44,8 +44,9 @@ template:
    env: dev
    tier: db
    project: roboshop
+   
  spec:
-  selecor:
+  selector:
     # labels are used as selectors , this service is connected to all pods having  these resources
     name: mongodb
     env: dev
